@@ -1,6 +1,6 @@
 # Temporal terraform module
 
-Define modules to help users simplify Temporal Cloud Resource Deployment
+Define modules to help users simplify Temporal cloud resource deployment
 
 ## How to use
 

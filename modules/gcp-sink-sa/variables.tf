@@ -13,7 +13,7 @@ variable "temporal_service_account_emails" {
   type        = set(string)
 }
 
-variable "enable_cmek" {
-  description = "Set to true if customer-managed encryption keys (CMEK) is added to the bucket"
-  type        = bool
+variable "sink_name" {
+  description = "The name of pub/sub topic or gcs bucket"
+  type        = string
 }

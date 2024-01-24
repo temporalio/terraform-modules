@@ -17,8 +17,8 @@ module "sink-sa" {
     version = "~> 4.0"
 
     service_account_id              = "<SA ID >"
-    temporal_service_account_emails = "<[...,...]>"
     gcp_project_id                  = "<PROJECT ID>"
-    enable_cmek                     = "<TRUE/FALSE>"
+    temporal_service_account_emails = "<[...,...]>"
+    sink_name                       = "<GCS BUCKET NAME OR PUBSUB TOPIC NAME>"
 }
 ```

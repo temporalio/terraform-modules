@@ -1,10 +1,10 @@
 variable "service_account_id" {
-  description = "The id of service account that allow Temporal write to sink."
+  description = "The id of service account that allow Temporal write to sink"
   type        = string
 }
 
 variable "gcp_project_id" {
-  description = "The id of google project."
+  description = "The id of google project"
   type        = string
 }
 

@@ -12,7 +12,7 @@ This submodule facilitates the configuration of a GCP sink service account, an e
 Basic usage of this submodule is as follows:
 
 ```hcl
-module "sink-sa" {
+module "gcp-sink-sa" {
     source  = "terraform-modules/modules/gcp-sink-sa"
     version = "~> 4.0"
 

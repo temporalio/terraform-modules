@@ -18,7 +18,7 @@ module "gcp-sink-sa" {
 
     service_account_id              = "<SA ID >"
     gcp_project_id                  = "<PROJECT ID>"
-    temporal_service_account_emails = "<[...,...]>"
     sink_name                       = "<GCS BUCKET NAME OR PUBSUB TOPIC NAME>"
+    temporal_service_account_emails = "<[...,...]>"
 }
 ```

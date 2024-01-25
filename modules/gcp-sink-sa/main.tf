@@ -5,6 +5,7 @@ locals {
 }
 
 resource "google_service_account" "gcp_sink_sa" {
+  project      = var.gcp_project_id
   account_id   = var.service_account_id
   display_name = "Service account allow Temporal write to sink"
 }

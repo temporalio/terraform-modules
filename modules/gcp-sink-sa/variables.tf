@@ -13,7 +13,7 @@ variable "temporal_service_account_emails" {
   type        = set(string)
 }
 
-variable "sink_name" {
+variable "destination_name" {
   description = "The name of pub/sub topic or gcs bucket"
   type        = string
 }

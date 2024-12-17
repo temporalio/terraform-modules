@@ -28,7 +28,6 @@ resource "google_pubsub_topic_iam_member" "service_account_pubsub_access" {
   role   = "roles/pubsub.publisher"
   topic  = var.destination_name
   member = "serviceAccount:${google_service_account.gcp_sink_sa.email}"
-  count  = local.is_export ? 0 : 1
 }
 
 resource "google_service_account_iam_member" "service_account_token_creator_role" {

@@ -22,3 +22,7 @@ module "gcp-sink-sa" {
     temporal_service_account_emails = "<[...,...]>"
 }
 ```
+
+NOTES:
+
+- for a pubsub `destination_name` use the name and not the full URN.

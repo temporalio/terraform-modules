@@ -1,7 +1,7 @@
 resource "google_service_account" "auditlog_sa" {
   project      = var.gcp_project_id
   account_id   = var.service_account_id
-  display_name = "Service account allow Temporal write to sink"
+  display_name = "Service account allow Temporal write to pub sub"
 }
 
 resource "google_pubsub_topic_iam_member" "service_account_pubsub_access" {

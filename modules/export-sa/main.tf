@@ -1,7 +1,7 @@
 resource "google_service_account" "export_sa" {
   project      = var.gcp_project_id
   account_id   = var.service_account_id
-  display_name = "Service account allow Temporal write to sink"
+  display_name = "Service account allow Temporal write to Export sink"
 }
 
 resource "google_storage_bucket_iam_member" "service_account_storage_access" {

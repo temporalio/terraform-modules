@@ -1,6 +1,6 @@
 # Terraform GCP Service Account Module For Export
 
-This submodule facilitates the configuration of a GCP sink service account for Export, an essential step in the overall setup of a GCP sink. The module provides support for the following functionalities:
+This submodule facilitates the configuration of a GCP service account, an essential step in the overall setup for Export. The module provides support for the following functionalities:
 
 - Creation of a service account within the customer's GCP project.
 - Granting write permissions to GCP Storage.

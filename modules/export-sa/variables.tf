@@ -1,5 +1,5 @@
 variable "service_account_id" {
-  description = "The id of service account that allow Temporal write to sink"
+  description = "The id of service account that allow Temporal write to Export sink"
   type        = string
 }
 

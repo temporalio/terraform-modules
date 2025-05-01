@@ -18,7 +18,7 @@ module "export-sa" {
 
     service_account_id              = "<SA ID >"
     gcp_project_id                  = "<PROJECT ID>"
-    destination_name                = "<GCS BUCKET NAME>"
+    destination_name                = "<GCS BUCKET NAME e.g. mytestbucket>"
     temporal_service_account_emails = "<[...,...]>"
 }
 ```

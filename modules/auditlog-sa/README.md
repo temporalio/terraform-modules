@@ -1,6 +1,6 @@
-# Terraform GCP Sink Service Account Module
+# Terraform GCP Service Account Module For Auditlog
 
-This submodule facilitates the configuration of a GCP sink service account, an essential step in the overall setup of a GCP sink. The module provides support for the following functionalities:
+This submodule facilitates the configuration of a GCP sink service account, an essential step in the overall setup of auditlog. The module provides support for the following functionalities:
 
 - Creation of a service account within the customer's GCP project.
 - Granting write permissions to Pub/Sub.
@@ -18,7 +18,7 @@ module "gcp-sink-sa" {
 
     service_account_id              = "<SA ID >"
     gcp_project_id                  = "<PROJECT ID>"
-    destination_name                = "<PUBSUB TOPIC NAME>"
+    destination_name                = "<PUBSUB TOPIC NAME. e.g. mytesttopic>"
     temporal_service_account_emails = "<[...,...]>"
 }
 ```

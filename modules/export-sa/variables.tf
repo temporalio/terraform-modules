@@ -14,6 +14,6 @@ variable "temporal_service_account_emails" {
 }
 
 variable "destination_name" {
-  description = "The name of pub/sub topic or gcs bucket"
+  description = "The name of gcs bucket"
   type        = string
 }

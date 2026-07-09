@@ -5,8 +5,8 @@ resource "azuread_service_principal" "multitenant_app" {
   app_role_assignment_required = false
 }
 
-resource "azurerm_role_definition" "storage_blob_writer_custom" {
-  name        = "Custom Storage Blob Writer Role"
+resource "azurerm_role_definition" "temporal_export_storage_blob_writer" {
+  name        = "Temporal Export Storage Blob Writer"
   scope       = var.role_assignment_scope
   description = "Allows reading storage accounts and writing blobs."
 
@@ -15,13 +15,9 @@ resource "azurerm_role_definition" "storage_blob_writer_custom" {
       "Microsoft.Storage/storageAccounts/read",
     ]
 
-    not_actions = []
-
     data_actions = [
       "Microsoft.Storage/storageAccounts/blobServices/containers/blobs/write",
     ]
-
-    not_data_actions = []
   }
 
   assignable_scopes = [
@@ -29,9 +25,9 @@ resource "azurerm_role_definition" "storage_blob_writer_custom" {
   ]
 }
 
-resource "azurerm_role_assignment" "multitenant_app_custom_role" {
+resource "azurerm_role_assignment" "temporal_export_storage_blob_writer" {
   scope              = var.storage_account_id
-  role_definition_id = azurerm_role_definition.storage_blob_writer_custom.role_definition_resource_id
+  role_definition_id = azurerm_role_definition.temporal_export_storage_blob_writer.role_definition_resource_id
   principal_id       = azuread_service_principal.multitenant_app.object_id
 
   principal_type = "ServicePrincipal"

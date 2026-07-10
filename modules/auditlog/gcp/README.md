@@ -13,7 +13,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "auditlog-sa" {
-    source  = "terraform-modules/modules/auditlog-sa"
+    source  = "terraform-modules/modules/auditlog/gcp"
     version = "~> 4.0"
 
     service_account_id              = "<SA ID >"

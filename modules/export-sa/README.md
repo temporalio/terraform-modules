@@ -13,7 +13,7 @@ Basic usage of this submodule is as follows:
 
 ```hcl
 module "export-sa" {
-    source  = "terraform-modules/modules/export/gcp"
+    source  = "terraform-modules/modules/export-sa"
     version = "~> 4.0"
 
     service_account_id              = "<SA ID >"

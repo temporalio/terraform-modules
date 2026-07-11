@@ -11,8 +11,8 @@ This submodule facilitates the configuration of an Azure service principal and r
 Basic usage of this submodule is as follows:
 
 ```hcl
-module "export-sp" {
-    source  = "terraform-modules/modules/export/azure"
+module "export-sa-azure" {
+    source  = "terraform-modules/modules/export-sa-azure"
     version = "~> 4.0"
 
     multitenant_app_client_id = "<CLIENT ID of the multi-tenant app registration>"

@@ -24,3 +24,9 @@ variable "deploy_roles" {
   type        = set(string)
   default     = ["roles/run.developer"]
 }
+
+variable "runner_service_account_email" {
+  description = "Email of the service account the Cloud Run worker pool runs as. Leave empty to use the project's default Compute Engine service account, which Cloud Run worker pools use by default. The invoker is granted actAs on this account so it can attach it as the pool's service identity. This module does not create the runner or grant it any workload roles"
+  type        = string
+  default     = ""
+}

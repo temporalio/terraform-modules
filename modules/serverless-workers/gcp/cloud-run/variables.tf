@@ -26,7 +26,11 @@ variable "deploy_roles" {
 }
 
 variable "runner_service_account_email" {
-  description = "Email of the service account the Cloud Run worker pool runs as. Leave empty to use the project's default Compute Engine service account, which Cloud Run worker pools use by default. The invoker is granted actAs on this account so it can attach it as the pool's service identity. This module does not create the runner or grant it any workload roles"
+  description = "Email of the dedicated service account the Cloud Run worker pool runs as. Required: you create this service account and grant it the least-privilege roles the pool needs (see README); the invoker is granted actAs on it so it can attach it as the pool's service identity. This module does not create the runner and does not fall back to the project default Compute Engine service account"
   type        = string
-  default     = ""
+
+  validation {
+    condition     = can(regex("@[^@]+\\.gserviceaccount\\.com$", var.runner_service_account_email))
+    error_message = "runner_service_account_email must be a GCP service account email (for example name@PROJECT.iam.gserviceaccount.com). Supply a dedicated runner service account; this module does not create one or fall back to the default Compute Engine service account."
+  }
 }

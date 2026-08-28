@@ -9,6 +9,6 @@ output "invoker_id" {
 }
 
 output "runner_service_account_email" {
-  description = "Email of the service account the worker pool runs as (the caller-provided one, or the project default Compute Engine SA when unset). Set this as the worker pool's service_account (spec.template.serviceAccount)"
-  value       = local.runner_service_account_email
+  description = "Email of the service account the worker pool runs as (the value supplied in runner_service_account_email). Set this as the worker pool's service_account (spec.template.serviceAccount)"
+  value       = var.runner_service_account_email
 }

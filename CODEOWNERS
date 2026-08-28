@@ -1,1 +1,4 @@
 *       @temporalio/saas
+
+# The serverless workers module is co-owned by the compute team.
+/modules/serverless-workers/ @temporalio/saas @temporalio/compute
